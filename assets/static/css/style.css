@@ -3,6 +3,12 @@ label {
 	font-size: small;
 }
 
+.title {
+  top: 20px; /* Stay on top */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+
 .size:hover {
     opacity: 0.2;
 }

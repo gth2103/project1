@@ -22,16 +22,18 @@
              crossorigin="anonymous">
          </script>
 
-         <link rel="stylesheet" href="./assets/static/css/style.css">     
+         <link rel="stylesheet" href="./assets/static/css/style.css"> 
+
+         <script type="text/javascript" src="./assets/static/javascript/factory.js"></script>    
     </head>
     <body>
         <div class="container">
-            <div class="row m-5">
-                <div class="col-11 m-3 title text-center">
+            <div class="row">
+                <div class="col-10 pt-0 title text-center position-fixed">
                     <h1>ICE-CREAM FACTORY</h1>
                 </div>
             </div>
-            <div class="row m-5">
+            <div class="row m-5 pt-5 position-relative">
                 <div class="col-3 m-4 size cone cone-1 text-center">
                     <img id="small-cone" class="m-2" src="./assets/static/images/icecream.png">
                 </div>
@@ -44,15 +46,27 @@
             </div>
             <div class="row m-5">
                 <div class="col-3 m-4 cone-1 text-center">
-                    <h3>small</h3>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-primary pt-2 pb-1" data-toggle="modal" data-target="#small-nutrition">
+                        <h4>small</h4>
+                    </button>
+                    <br>
                     <label for="cone-1"> 1 scoop </label>
                 </div>
-                <div class="col-3 m-4 cone-2 text-center">
-                    <h3>medium</h3>
+                <div class="col-3 m-4 cone-2 text-center"> 
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-success pt-2 pb-1" data-toggle="modal" data-target="#medium-nutrition">
+                        <h4>medium</h4>
+                    </button>
+                    <br>
                     <label for="cone-2"> 2 scoops </label>
                 </div>
                 <div class="col-3 m-4 cone-3 text-center">
-                    <h3>large</h3>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-warning pt-2 pb-1" data-toggle="modal" data-target="#large-nutrition">
+                        <h4>large</h4>
+                    </button>
+                    <br>
                     <label for="cone-3"> 3 scoops </label>
                 </div>
             </div>
@@ -68,11 +82,146 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-11 footer text-center">
+                <div class="col-10 pt-5 footer position-fixed text-center">
                     Copyright &copy;
                 </div>
             </div>
         </div>
+
+<!-- Modal -->
+<div class="modal fade" id="small-nutrition" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Nutritional Facts:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col m-2 ml-3">
+                <p>
+                    <h6>&nbsp;&nbsp;&nbsp;&nbsp;size:&nbsp;&nbsp;&nbsp;&nbsp;SMALL</h6>
+                </p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-5 m-2">
+                <p>
+                    <h6>container:&nbsp;&nbsp;&nbsp;&nbsp;Cone</h6>
+                </p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-5 m-2 pl-5">
+                <p>
+                    <h6>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;
+                        Cup
+                    </h6>
+                </p>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        ***
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="medium-nutrition" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Nutritional Facts:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col m-2 ml-3">
+                <p>
+                    <h6>&nbsp;&nbsp;&nbsp;&nbsp;size:&nbsp;&nbsp;&nbsp;&nbsp;MEDIUM</h6>
+                </p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-5 m-2">
+                <p>
+                    <h6>container:&nbsp;&nbsp;&nbsp;&nbsp;Cone</h6>
+                </p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-5 m-2 pl-5">
+                <p>
+                    <h6>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;
+                        Cup
+                    </h6>
+                </p>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        ***
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="large-nutrition" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Nutritional Facts:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col m-2 ml-3">
+                <p>
+                    <h6>&nbsp;&nbsp;&nbsp;&nbsp;size:&nbsp;&nbsp;&nbsp;&nbsp;LARGE</h6>
+                </p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-5 m-2">
+                <p>
+                    <h6>container:&nbsp;&nbsp;&nbsp;&nbsp;Cone</h6>
+                </p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-5 m-2 pl-5">
+                <p>
+                    <h6>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;
+                        Cup
+                    </h6>
+                </p>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        ***
+      </div>
+    </div>
+  </div>
+</div>
     </body>
 </html>
 
