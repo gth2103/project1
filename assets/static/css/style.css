@@ -1,0 +1,27 @@
+#small-cone {
+	max-height: 150px;
+}
+
+#medium-cone {
+	max-height: 175px;
+}
+
+#large-cone {
+	max-height: 200px;
+}
+
+#small-cup {
+	max-height: 150px;
+}
+
+#medium-cup {
+	max-height: 190px;
+}
+
+#large-cup {
+	max-height: 220px;
+}
+
+.footer {
+	color: #cccccc;
+}
