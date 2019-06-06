@@ -8,7 +8,7 @@ $('document').ready(function(){
            $('.title').css('top', '-50px')
            $('.footer').css('bottom', '-50px')
         } else {
-        	$('.title').css('top', '20px')
+        	$('.title').css('top', '10px')
         	$('.footer').css('bottom', '10px')
         }
 

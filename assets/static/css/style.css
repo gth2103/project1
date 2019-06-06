@@ -8,9 +8,17 @@ label {
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
-
 .size:hover {
     opacity: 0.2;
+}
+
+.flavor-img {
+	max-height: 90px;
+	opacity: 0.2;
+}
+
+.flavor-img:hover {
+	opacity: 1;
 }
 
 #small-cone {
@@ -18,11 +26,11 @@ label {
 }
 
 #medium-cone {
-	max-height: 175px;
+	max-height: 190px;
 }
 
 #large-cone {
-	max-height: 200px;
+	max-height: 230px;
 }
 
 #small-cup {
@@ -33,15 +41,14 @@ label {
 #medium-cup {
 	height: 190px;
 	width: 130px ;
-
 }
 
 #large-cup {
-	height: 220px;
+	height: 230px;
 	width: 150px ;
-
 }
 
 .footer {
 	color: #cccccc;
+	bottom:10px;
 }
