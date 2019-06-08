@@ -1,27 +1,54 @@
+label {
+	color: #999999;
+	font-size: small;
+}
+
+.title {
+  top: 20px; /* Stay on top */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+.size:hover {
+    opacity: 0.2;
+}
+
+.flavor-img {
+	max-height: 90px;
+	opacity: 0.2;
+}
+
+.flavor-img:hover {
+	opacity: 1;
+}
+
 #small-cone {
 	max-height: 150px;
 }
 
 #medium-cone {
-	max-height: 175px;
-}
-
-#large-cone {
-	max-height: 200px;
-}
-
-#small-cup {
-	max-height: 150px;
-}
-
-#medium-cup {
 	max-height: 190px;
 }
 
+#large-cone {
+	max-height: 230px;
+}
+
+#small-cup {
+	height: 150px;
+	width: 110px ;
+}
+
+#medium-cup {
+	height: 190px;
+	width: 130px ;
+}
+
 #large-cup {
-	max-height: 220px;
+	height: 230px;
+	width: 150px ;
 }
 
 .footer {
 	color: #cccccc;
+	bottom:10px;
 }
