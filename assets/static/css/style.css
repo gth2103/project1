@@ -3,6 +3,15 @@ label {
 	font-size: small;
 }
 
+a:hover{
+	text-decoration: none;
+	color: lightgray;
+}
+
+a {
+	color: pink;
+}
+
 .title {
   top: 20px; /* Stay on top */
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
@@ -19,6 +28,22 @@ label {
 
 .flavor-img:hover {
 	opacity: 1;
+}
+
+.addedToCart {
+	display: none;
+}
+
+.cartEmpty {
+	opacity: 0.3;
+}
+
+.cartFull {
+	opacity: 1;
+}
+
+#cart {
+	max-height: 100px;
 }
 
 #small-cone {
