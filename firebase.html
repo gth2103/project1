@@ -104,12 +104,12 @@
         $("#add-user").on("click", function (event) {
             event.preventDefault();
             // YOUR TASK!!!
-            // Code in the logic for storing and retrieving the most recent user.
+            
             // Don't forget to provide initial data to your Firebase database.
-            name = $("#id-Order-input").val().trim();
-            email = $("#name-input").val().trim();
-            age = $("#size-input").val().trim();
-            comment = $("#flavor-input").val().trim();
+            idOrder = $("#id-Order-input").val().trim();
+            name= $("#name-input").val().trim();
+            size = $("#size-input").val().trim();
+            flavor = $("#flavor-input").val().trim();
 
             // Code for the push
             dataRef.ref().push({
@@ -132,7 +132,7 @@
 
 
             // full list of items to the well
-            $("#full-order-list").append("<div class='well'><span class='order-id'> " +
+             $("#full-order-list").append("<div class='well'><span class='order-id'> " +
                 childSnapshot.val().idOrder +
                 " </span><span class='order-name'> " + childSnapshot.val().name +
                 " </span><span class='order-size'> " + childSnapshot.val().size +
