@@ -13,6 +13,11 @@
             crossorigin="anonymous"> 
          </script>
 
+         <script   src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+            integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+            crossorigin="anonymous">
+        </script>
+
          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
              integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
              crossorigin="anonymous">
@@ -30,28 +35,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-11 pr-5 title text-center position-fixed">
-                    <h1>ICE-CREAM FACTORY</h1>
+                    <a href="./index.html">
+                        <h1>ICE-CREAM FACTORY</h1>
+                    </a>
                 </div>
             </div>
             <div class="row m-5 pt-5 position-relative">
-                <div class="col-4 mt-5 size cone cone-1 text-center">
-                    <a href="./assets/templates/flavors.html">
+                
+            </div>
+            <div class="row m-5 pt-5 position-relative">
+                <div class="col-2 ml-4 mt-5 size cone cone-1 text-center">
+                    <a href="#">
                         <img id="small-cone" class="m-2" src="./assets/static/images/icecream.png">
                     </a>
                 </div>
-                <div class="col-4 mt-5 size cone cone-2 text-center">
-                    <a href="./assets/templates/flavors.html">
-                        <img id="medium-cone" class="m-2" src="./assets/static/images/icecream.png">
+                <div class="col-2 ml-4 mt-5 size cone cone-2 text-center">
+                    <a href="#">
+                        <img id="medium-cone" class="m-2" src="./assets/static/images/icecream-cone-2.png">
                     </a>
                 </div>
-                <div class="col-4  mt-5 size  cone cone-3 text-center">
-                    <a href="./assets/templates/flavors.html">
-                        <img id="large-cone" class="m-2" src="./assets/static/images/icecream.png">
+                <div class="col-2 ml-4 mt-5 size  cone cone-3 text-center">
+                    <a href="#">
+                        <img id="large-cone" class="m-2" src="./assets/static/images/icecream-cone-3.png">
                     </a>
                 </div>
             </div>
             <div class="row m-5">
-                <div class="col-4 cone-1 text-center">
+                <div class="col-2 ml-4 text-center">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-outline-primary pt-2 pb-1" data-toggle="modal" data-target="#small-nutrition">
                         <h4>small</h4>
@@ -59,37 +69,42 @@
                     <br>
                     <label for="cone-1"> 1 scoop </label>
                 </div>
-                <div class="col-4 cone-2 text-center"> 
+                <div class="col-2 ml-4 text-center"> 
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-outline-success pt-2 pb-1" data-toggle="modal" data-target="#medium-nutrition">
+                    <button type="button" class="btn btn-outline-primary pt-2 pb-1" data-toggle="modal" data-target="#medium-nutrition">
                         <h4>medium</h4>
                     </button>
                     <br>
                     <label for="cone-2"> 2 scoops </label>
                 </div>
-                <div class="col-4 cone-3 text-center">
+                <div class="col-2 ml-4 text-center">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-outline-warning pt-2 pb-1" data-toggle="modal" data-target="#large-nutrition">
+                    <button type="button" class="btn btn-outline-primary pt-2 pb-1" data-toggle="modal" data-target="#large-nutrition">
                         <h4>large</h4>
                     </button>
                     <br>
                     <label for="cone-3"> 3 scoops </label>
                 </div>
+                <div class="col-4 cart bounce-6 text-right">
+                    <a href="#">
+                        <img id="cart" class="m-2" src="./assets/static/images/shopping-cart.png">
+                    </a>
+                </div>
             </div>
-            <div class="row m-5">
-                <div class="col-4 size cup cup-1 text-center">
-                    <a href="./assets/templates/flavors.html">
-                        <img id="small-cup" class="m-2" src="./assets/static/images/bowl.tiff">
+            <div class="row m-2">
+                <div class="col-2 ml-4 size cup cup-1 text-center">
+                    <a href="#">
+                        <img id="small-cup" class="m-2" src="./assets/static/images/bowl-1.tiff">
                     </a>
                 </div>
-                <div class="col-4 size cup cup-2 text-center">
-                    <a href="./assets/templates/flavors.html">
-                        <img id="medium-cup" class="m-2" src="./assets/static/images/bowl.tiff">
+                <div class="col-2 ml-4 size cup cup-2 text-center">
+                    <a href="#">
+                        <img id="medium-cup" class="m-2" src="./assets/static/images/bowl-2.tiff">
                     </a>
                 </div>
-                <div class="col-4 size cup cup-3 text-center">
-                    <a href="./assets/templates/flavors.html">
-                        <img id="large-cup" class="m-2" src="./assets/static/images/bowl.tiff">
+                <div class="col-2 ml-4 size cup cup-3 text-center">
+                    <a href="#">
+                        <img id="large-cup" class="m-2" src="./assets/static/images/bowl-3.tiff">
                     </a>
                 </div>
             </div>
