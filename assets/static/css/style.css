@@ -30,20 +30,8 @@ a {
 	opacity: 1;
 }
 
-.addedToCart {
-	display: none;
-}
-
-.cartEmpty {
-	opacity: 0.3;
-}
-
-.cartFull {
-	opacity: 1;
-}
-
 #cart {
-	max-height: 100px;
+	max-height: 150px;
 }
 
 #small-cone {
