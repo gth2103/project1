@@ -6,6 +6,7 @@ label {
 a:hover{
 	text-decoration: none;
 	color: lightgray;
+	cursor: pointer;
 }
 
 a {
@@ -19,6 +20,7 @@ a {
 
 .size:hover {
     opacity: 0.2;
+    cursor: pointer;
 }
 
 .flavor-img {
