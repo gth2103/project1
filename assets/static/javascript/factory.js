@@ -104,7 +104,7 @@ var setDroppable  = function(id) {
 
         	}
         	else if(id === 'large-cup'){
-        		$('.cup-3').html('<img draggable="false" id="large-cup" title="large Cup" class="m-2 size" src="./assets/static/images/bowl-3.tiff">');
+        		$('.cup-3').html('<img draggable="false" id="large-cup" title="Large Cup" class="m-2 size" src="./assets/static/images/bowl-3.tiff">');
         		$('.cup-3').ready('#large-cup', setDraggable(lcup));
         		$('.cup-3').ready('#large-cup', focus());
 

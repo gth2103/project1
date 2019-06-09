@@ -4,7 +4,7 @@ label {
 }
 
 body {
-	background-color: rgba(254, 254, 254, 0.05);
+	background-color: rgba(128, 128, 128, 0.05);
 	background-image: url("#");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -30,6 +30,7 @@ a {
   top: 20px; /* Stay on top */
   left: 20px;
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  text-shadow: 1px 1px 20px lightgray;
 }
 
 .cone {
@@ -47,8 +48,13 @@ a {
     filter: drop-shadow(2px 2px 5px rgba(255, 235, 59, 0.4));
 }
 
+.selected {
+	max-width: 10px;
+}
+
 .ui-draggable-dragging {
-	filter: drop-shadow(2px 2px 5px rgba(255, 235, 59, 0.8));
+	filter: drop-shadow(2px 2px 5px rgba(255, 235, 59, 0.8)) !important;
+	max-height: 75px !important;
 }
 
 .ui-droppable-active {
@@ -58,7 +64,7 @@ a {
 
 .focus {
 	opacity: 1 !important;
-	filter: drop-shadow(2px 2px 5px rgba(255, 235, 59, 0.4))  !important;
+	filter: drop-shadow(2px 2px 20px rgba(255, 235, 59, 0.8))  !important;
 }
 
 .flavor-img {
@@ -71,7 +77,8 @@ a {
 }
 
 #cart {
-	max-height: 150px;
+	max-height: 175px;
+	filter: drop-shadow(2px 2px 5px lightgray);
 }
 
 .cart-bounce{
@@ -110,18 +117,18 @@ a {
 }
 
 #small-cup {
-	height: 110px;
-	width: 80px ;
+	max-height: 110px;
+	max-width: 80px ;
 }
 
 #medium-cup {
-	height: 150px;
-	width: 100px ;
+	max-height: 150px;
+	max-width: 100px ;
 }
 
 #large-cup {
-	height: 190px;
-	width: 120px ;
+	max-height: 190px;
+	max-width: 120px ;
 }
 
 .footer {
