@@ -3,6 +3,19 @@ label {
 	font-size: small;
 }
 
+body {
+	background-color: rgba(254, 254, 254, 0.05);
+	background-image: url("#");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	-webkit-font-smoothing:antialiased
+}
+
+img {
+	user-select: none;
+}
+
 a:hover{
 	text-decoration: none;
 	color: lightgray;
@@ -15,6 +28,7 @@ a {
 
 .title {
   top: 20px; /* Stay on top */
+  left: 20px;
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
