@@ -36,18 +36,6 @@ var focus =  function(){
 	});
 }
 
-var select =  function(){
-
-	$('.size').on('mousedown', function(){
-	});
-}
-
-var unselect =  function(){
-
-	$('.size').on('mouseup', function(){
-	});
-}
-
 var setDraggable  = function(id) {
 
 	$(id).on("click", function(){
@@ -56,6 +44,7 @@ var setDraggable  = function(id) {
             zIndex: 100,
             revert: "invalid"
         });
+        $('#cart').removeClass('focus');
     });
 }
 
@@ -143,8 +132,6 @@ $('document').ready(function(){
 	setDroppable(cart);
 
 	focus();
-	select();
-	unselect();
 
 //   window.onscroll = function() {
 //       var currentScrollPos = window.pageYOffset;
