@@ -40,6 +40,7 @@ a {
 .size {
     cursor: pointer;
     opacity: 0.8;
+    transition: transform 1s ease-in-out;
 }
 
 .size:hover {
@@ -54,7 +55,7 @@ a {
 
 .ui-draggable-dragging {
 	filter: drop-shadow(2px 2px 5px rgba(255, 235, 59, 0.8)) !important;
-	max-height: 75px !important;
+	transform: scale(0.3);
 }
 
 .ui-droppable-active {
@@ -74,6 +75,11 @@ a {
 
 .flavor-img:hover {
 	opacity: 1;
+}
+
+.size.grabbing { 
+    cursor: grabbing; 
+    cursor: -webkit-grabbing;
 }
 
 #cart {

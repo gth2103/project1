@@ -132,7 +132,7 @@ $('document').ready(function(){
 	setDroppable(cart);
 
 	focus();
-
+	
 //   window.onscroll = function() {
 //       var currentScrollPos = window.pageYOffset;
 //       if (prevScrollpos > currentScrollPos) {
