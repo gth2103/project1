@@ -108,6 +108,8 @@ a {
 .focus {
 	opacity: 1 !important;
 	filter: drop-shadow(2px 2px 20px rgba(255, 235, 59, 0.8))  !important;
+	transition: transform 0.2s ease-in-out;
+	transform: scale(1.015);
 }
 
 .flavor-img {
