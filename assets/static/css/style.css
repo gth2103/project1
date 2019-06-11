@@ -26,6 +26,24 @@ a {
 	color: pink;
 }
 
+.counter {
+	font-weight: bold;
+	border-width: 2px !important;
+	top: 100px;
+	right: 20px;
+	width: 35px;
+	height: 35px;
+}
+
+.inactive {
+	color: grey;
+}
+
+.active {
+	color: green;
+	border-color: green !important;
+}
+
 .title {
   top: 20px; /* Stay on top */
   left: 20px;
@@ -40,7 +58,7 @@ a {
 .size {
     cursor: pointer;
     opacity: 0.8;
-    transition: transform 1s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .size:hover {

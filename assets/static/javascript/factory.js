@@ -48,6 +48,18 @@ var setDraggable  = function(id) {
     });
 }
 
+var setCounter = function(){
+	$('.counter').html(orders.length)
+	if(orders.length > 0){
+		$('.counter').removeClass('inactive');
+		$('.counter').addClass('active');
+	}
+	else{
+		$('.counter').removeClass('active');
+		$('.counter').addClass('inactive');
+	}
+}
+
 var setDroppable  = function(id) {
 
 	$(id).droppable({
@@ -111,6 +123,9 @@ var setDroppable  = function(id) {
         		var new_order = Order(++order_number, 2, 1);
         		orders.push(new_order);
         	}
+
+        	setCounter();
+
         	setTimeout(function(){
 				$('#cart').removeClass('cart-bounce');
 			}, 1000);
