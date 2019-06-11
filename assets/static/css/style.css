@@ -4,7 +4,7 @@ label {
 }
 
 body {
-	background-color: rgba(128, 128, 128, 0.05);
+	background-color: rgba(128, 128, 128, 0.02);
 	background-image: url("#");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -67,10 +67,15 @@ a {
 }
 
 .title {
-  top: 20px; /* Stay on top */
-  left: 20px;
+  top: 0px; /* Stay on top */
+  left: 0px;
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
   text-shadow: 1px 1px 20px lightgray;
+  background-color: #ffffff;
+}
+
+.inactive-title {
+  top: -50px;
 }
 
 .cone {
@@ -140,7 +145,7 @@ a {
     @keyframes bounce-4 {
         0%   { transform: scale(1,1)    translateY(0); }
         10%  { transform: scale(1.1,.9) translateY(0); }
-        30%  { transform: scale(.9,1.1) translateY(-100px); }
+        30%  { transform: scale(.9,1.1) translateY(-40px); }
         50%  { transform: scale(1,1)    translateY(0); }
         100% { transform: scale(1,1)    translateY(0); }
     }
@@ -172,7 +177,11 @@ a {
 	cursor: pointer;
 }
 
-
+.next-link-active {
+	transition: font-size 1s;
+	font-size: 2em;
+}
+	
 #cart {
 	max-height: 175px;
 	filter: drop-shadow(2px 2px 5px lightgray);
@@ -208,4 +217,9 @@ a {
 .footer {
 	color: #cccccc;
 	bottom:10px;
+	transition: bottom  0.3s;
+}
+
+.inactive-footer {
+	bottom: -50px;
 }

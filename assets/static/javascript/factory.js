@@ -1,4 +1,3 @@
-var prevScrollpos = window.pageYOffset;
 
 var scone = '#small-cone'
 var mcone = '#medium-cone'
@@ -14,6 +13,45 @@ var orders = []
 var order_number = 0;
 
 var size;
+
+let idleTimer = null;
+let idleState = false;
+
+function showTitle(time) {
+  clearTimeout(idleTimer);
+  if (idleState == true) {
+    $(".title").removeClass("inactive-title");
+    $(".footer").removeClass("inactive-footer");
+
+  }
+  idleState = false;
+  idleTimer = setTimeout(function() {
+  	$(".title").addClass("inactive-title");
+    $(".footer").addClass("inactive-footer");
+    idleState = true;
+  }, time);
+}
+
+var triggerTitle =  function(e) {
+
+	if(e.clientY > 175){
+		$(".title").addClass("inactive-title");
+	}
+	else{
+		$(".title").removeClass("inactive-title");
+	}
+}
+
+var triggerFooter =  function(e) {
+
+	if(800 >  e.clientY){
+    	$(".footer").addClass("inactive-footer");
+	}
+	else{
+    	$(".footer").removeClass("inactive-footer");
+	}
+}
+
 
 var Order = function(number, size,  container)  {
 
@@ -92,6 +130,8 @@ var setDroppable  = function(id) {
 
         	$('#cart').addClass('cart-bounce');
         	$('#cart').addClass('bounce-4');
+        	$('.counter').addClass('cart-bounce');
+        	$('.counter').addClass('bounce-4');
 
         	if(id === 'small-cone'){
         		$('.cone-1').html('<img draggable="false" id="small-cone" title="Small Cone" class="m-2 size" src="./assets/static/images/icecream.png">');
@@ -150,6 +190,8 @@ var setDroppable  = function(id) {
         	setTimeout(function(){
 				$('#cart').removeClass('cart-bounce');
 				$('#cart').removeClass('bounce-4');
+				$('.counter').removeClass('cart-bounce');
+				$('.counter').removeClass('bounce-4');
 			}, 1000);
 
            console.log(orders)
@@ -184,4 +226,12 @@ $('document').ready(function(){
 //
 //        prevScrollpos = currentScrollPos;
 //    }
+
+showTitle(1000);
+
+$(window).mousemove(function(e){
+    triggerTitle(e);
+    triggerFooter(e);
+});
+
 });
