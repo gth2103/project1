@@ -87,6 +87,8 @@ a {
     cursor: pointer;
     opacity: 1;
     filter: drop-shadow(2px 2px 5px rgba(255, 235, 59, 0.4));
+    animation-duration: 0.5s;
+    transform: rotate(-5deg);
 }
 
 .selected {
@@ -95,7 +97,7 @@ a {
 
 .ui-draggable-dragging {
 	filter: drop-shadow(2px 2px 5px rgba(255, 235, 59, 0.8)) !important;
-	transform: scale(0.3);
+	transform: scale(0.3) !important;
 }
 
 .ui-droppable-active {
