@@ -72,6 +72,7 @@ var setDroppable  = function(id) {
         	var id = $(ui.draggable).attr('id');
 
         	$('#cart').addClass('cart-bounce');
+        	$('#cart').addClass('bounce-4');
 
         	if(id === 'small-cone'){
         		$('.cone-1').html('<img draggable="false" id="small-cone" title="Small Cone" class="m-2 size" src="./assets/static/images/icecream.png">');
@@ -128,6 +129,7 @@ var setDroppable  = function(id) {
 
         	setTimeout(function(){
 				$('#cart').removeClass('cart-bounce');
+				$('#cart').removeClass('bounce-4');
 			}, 1000);
 
            console.log(orders)
