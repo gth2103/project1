@@ -33,6 +33,7 @@ a {
 	right: 80px;
 	width: 35px;
 	height: 35px;
+	background-color: rgba(128, 128, 128, 0.1);
 }
 
 .counter:hover {
