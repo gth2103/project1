@@ -53,10 +53,29 @@ var setCounter = function(){
 	if(orders.length > 0){
 		$('.counter').removeClass('inactive');
 		$('.counter').addClass('active');
+
 	}
 	else{
 		$('.counter').removeClass('active');
 		$('.counter').addClass('inactive');
+	}
+}
+
+var setNavigation = function () {
+	if(orders.length > 0){
+		$('.next').removeClass('next-inactive');
+		$('.link').attr('href', './assets/templates/flavors.html');
+		$('.next').addClass('next-active');
+		$('.link').removeClass('next-link-inactive');
+		$('.link').addClass('next-link-active');
+
+	}
+	else{
+		$('.next').removeClass('next-active');
+		$('.next').addClass('next-inactive');
+		$('.link').attr('href', '#');
+		$('.link').removeClass('next-link-active');
+		$('.link').addClass('next-link-inactive');
 	}
 }
 
@@ -126,6 +145,7 @@ var setDroppable  = function(id) {
         	}
 
         	setCounter();
+        	setNavigation();
 
         	setTimeout(function(){
 				$('#cart').removeClass('cart-bounce');
@@ -149,6 +169,8 @@ $('document').ready(function(){
 	setDroppable(cart);
 
 	focus();
+	setCounter();
+    setNavigation();
 	
 //   window.onscroll = function() {
 //       var currentScrollPos = window.pageYOffset;

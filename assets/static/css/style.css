@@ -29,8 +29,8 @@ a {
 .counter {
 	font-weight: bold;
 	border-width: 2px !important;
-	top: 100px;
-	right: 20px;
+	top: 50px;
+	right: 80px;
 	width: 35px;
 	height: 35px;
 }
@@ -97,7 +97,7 @@ a {
 
 .ui-draggable-dragging {
 	filter: drop-shadow(2px 2px 5px rgba(255, 235, 59, 0.8)) !important;
-	transform: scale(0.3) !important;
+	transform: scale(0.4) !important;
 }
 
 .ui-droppable-active {
@@ -143,36 +143,64 @@ a {
         100% { transform: scale(1,1)    translateY(0); }
     }
 
+.next-active {
+	max-width: 100px;
+	opacity: 0.6;
+}
+
+.next-inactive {
+	max-width: 100px;
+	opacity: 0.4;
+}
+
+.next-active:hover {
+	opacity: 0.8;
+}
+
+.next-link-inactive {
+	color: lightgrey;
+	cursor: default;
+}
+
+.next-link-inactive:hover {
+	cursor: default;
+}
+
+.next-link-active:hover {
+	cursor: pointer;
+}
+
+
 #cart {
 	max-height: 175px;
 	filter: drop-shadow(2px 2px 5px lightgray);
 }
 
 #small-cone {
-	max-height: 110px;
+	max-height: 70px;
 }
 
 #medium-cone {
-	max-height: 150px;
+	max-height: 110px;
 }
 
 #large-cone {
-	max-height: 190px;
+	max-height: 150px;
 }
 
 #small-cup {
-	max-height: 110px;
-	max-width: 80px ;
+	max-height: 75px;
+	max-width: 45px ;
 }
 
 #medium-cup {
-	max-height: 150px;
-	max-width: 100px ;
+	max-height: 110px;
+	max-width: 60px ;
 }
 
 #large-cup {
-	max-height: 190px;
-	max-width: 120px ;
+	max-height: 150px;
+	max-width: 80px ;
 }
 
 .footer {
