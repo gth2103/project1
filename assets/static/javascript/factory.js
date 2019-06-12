@@ -44,7 +44,7 @@ var triggerTitle =  function(e) {
 
 var triggerFooter =  function(e) {
 
-	if(800 >  e.clientY){
+	if(e.clientY < 800){
     	$(".footer").addClass("inactive-footer");
 	}
 	else{
@@ -214,24 +214,10 @@ $('document').ready(function(){
 	setCounter();
     setNavigation();
 	
-//   window.onscroll = function() {
-//       var currentScrollPos = window.pageYOffset;
-//       if (prevScrollpos > currentScrollPos) {
-//           $('.title').css('top', '-50px')
-//           $('.footer').css('bottom', '-50px')
-//        } else {
-//        	$('.title').css('top', '20px')
-//        	$('.footer').css('bottom', '10px')
-//        }
-//
-//        prevScrollpos = currentScrollPos;
-//    }
+	showTitle(2000);
 
-showTitle(1000);
-
-$(window).mousemove(function(e){
-    triggerTitle(e);
-    triggerFooter(e);
-});
-
+	$(window).mousemove(function(e){
+    	triggerTitle(e);
+    	triggerFooter(e);
+	});
 });
