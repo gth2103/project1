@@ -33,18 +33,19 @@
     </head>
     <body>
         <div class="container">
+        <span class="top">
             <div class="row">
-                <div class="col-12 title text-center position-fixed">
+                <div class="col-12 pt-3  p-2 title text-center position-fixed border-bottom">
                     <a href="./index.html">
-                        <h1>ICE-CREAM FACTORY</h1>
+                        <h2>ICE-CREAM FACTORY</h2>
                     </a>
                 </div>
             </div>
-            <div class="row m-5 pt-5 position-relative">
-                
+            <div class="row mt-5 ml-2 ml-xl-4 pl-2 pl-md-2 pl-lg-4 pt-5 position-relative"> 
+                <label for="nutrition" class="nutrition ml-5 pt-5">Click below for nutritional information.</label>
             </div>
-            <div class="row m-5">
-                <div class="col-2 ml-4 pt-4 text-center">
+            <div id="nutrition" class="row ml-5">
+                <div class="col-2 pt-4 text-center">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-outline-primary pt-2 pb-1" data-toggle="modal" data-target="#small-nutrition">
                         <h4>small</h4>
@@ -68,8 +69,12 @@
                     <br>
                     <label for="cone-3"> 3 scoops </label>
                 </div>
+                <div class="col-4 pt-4 pl-4 text-center">
+                        <h3>Drag and Drop your items into the shopping bag!</h3>
+                </div>
+                
             </div>
-            <div class="row m-2 position-relative">
+            <div class="row m-2 mt-5 position-relative">
                 <div class="col-2 ml-4 cone cone-1 text-center">
                         <img draggable="false" id="small-cone" title="Small Cone" class="m-2 size" src="./assets/static/images/icecream.png">
                 </div>
@@ -79,23 +84,31 @@
                 <div class="col-2 ml-4  cone cone-3 text-center">
                         <img draggable="false" id="large-cone" title="Large Cone" class="m-2 size" src="./assets/static/images/icecream-cone-3.png">
                 </div>
-                <div class="col-4 pt-5 cart bounce-4 text-right">
-                        <img draggable="false" id="cart" title="Drop items here." class="m-2 bounce-4" src="./assets/static/images/empty-bag.png">
+                <div class="col-4 pt-4 pl-5 text-center">
+                        <a class="link next-link-inactive" href="">
+                            <h5>Next, choose you flavors!</h5>
+                            <img draggable="false" title="Choose you flavor" class="m-2 next next-inactive" src="./assets/static/images/next.png">
+                        </a>
                 </div>
             </div>
+        </span>
             <div class="row m-2">
-                <div class="col-2 ml-4  cup cup-1 text-center">
+                <div class="col-2 ml-4  pt-5 cup cup-1 text-center">
                         <img draggable="false" id="small-cup" title="Small Cup" class="m-2 size" src="./assets/static/images/bowl-1.tiff">
                 </div>
-                <div class="col-2 ml-4 cup cup-2 text-center">
+                <div class="col-2 ml-4 pt-5 cup cup-2 text-center">
                         <img draggable="false" id="medium-cup" title="Medium Cup" class="m-2 size" src="./assets/static/images/bowl-2.tiff">
                 </div>
-                <div class="col-2 ml-4 cup cup-3 text-center">
+                <div class="col-2 ml-4 pt-5 cup cup-3 text-center">
                         <img draggable="false" id="large-cup" title="Large Cup" class="m-2 size" src="./assets/static/images/bowl-3.tiff">
+                </div>
+                <div class="col-4 pl-5 cart bounce-4 text-center">
+                        <img draggable="false" id="cart" title="Drop items here" class="m-2" src="./assets/static/images/empty-bag.png">
+                        <a href="#" ><span title="View shopping bag" class="cart bounce-4 counter counter-shake position-absolute border rounded-circle text-center pt-1 inactive">0</span></a> 
                 </div>
             </div>
             <div class="row">
-                <div class="col-9 pt-5 footer position-fixed text-center">
+                <div class="col-10 pt-5 pl-5 footer position-fixed text-center">
                     Copyright &copy;
                 </div>
             </div>

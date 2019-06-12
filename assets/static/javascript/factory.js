@@ -1,4 +1,3 @@
-var prevScrollpos = window.pageYOffset;
 
 var scone = '#small-cone'
 var mcone = '#medium-cone'
@@ -14,6 +13,45 @@ var orders = []
 var order_number = 0;
 
 var size;
+
+let idleTimer = null;
+let idleState = false;
+
+function showTitle(time) {
+  clearTimeout(idleTimer);
+  if (idleState == true) {
+    $(".title").removeClass("inactive-title");
+    $(".footer").removeClass("inactive-footer");
+
+  }
+  idleState = false;
+  idleTimer = setTimeout(function() {
+  	$(".title").addClass("inactive-title");
+    $(".footer").addClass("inactive-footer");
+    idleState = true;
+  }, time);
+}
+
+var triggerTitle =  function(e) {
+
+	if(e.clientY > 175){
+		$(".title").addClass("inactive-title");
+	}
+	else{
+		$(".title").removeClass("inactive-title");
+	}
+}
+
+var triggerFooter =  function(e) {
+
+	if(800 >  e.clientY){
+    	$(".footer").addClass("inactive-footer");
+	}
+	else{
+    	$(".footer").removeClass("inactive-footer");
+	}
+}
+
 
 var Order = function(number, size,  container)  {
 
@@ -48,6 +86,37 @@ var setDraggable  = function(id) {
     });
 }
 
+var setCounter = function(){
+	$('.counter').html(orders.length)
+	if(orders.length > 0){
+		$('.counter').removeClass('inactive');
+		$('.counter').addClass('active');
+
+	}
+	else{
+		$('.counter').removeClass('active');
+		$('.counter').addClass('inactive');
+	}
+}
+
+var setNavigation = function () {
+	if(orders.length > 0){
+		$('.next').removeClass('next-inactive');
+		$('.link').attr('href', './assets/templates/flavors.html');
+		$('.next').addClass('next-active');
+		$('.link').removeClass('next-link-inactive');
+		$('.link').addClass('next-link-active');
+
+	}
+	else{
+		$('.next').removeClass('next-active');
+		$('.next').addClass('next-inactive');
+		$('.link').attr('href', '#');
+		$('.link').removeClass('next-link-active');
+		$('.link').addClass('next-link-inactive');
+	}
+}
+
 var setDroppable  = function(id) {
 
 	$(id).droppable({
@@ -60,6 +129,9 @@ var setDroppable  = function(id) {
         	var id = $(ui.draggable).attr('id');
 
         	$('#cart').addClass('cart-bounce');
+        	$('#cart').addClass('bounce-4');
+        	$('.counter').addClass('cart-bounce');
+        	$('.counter').addClass('bounce-4');
 
         	if(id === 'small-cone'){
         		$('.cone-1').html('<img draggable="false" id="small-cone" title="Small Cone" class="m-2 size" src="./assets/static/images/icecream.png">');
@@ -111,8 +183,15 @@ var setDroppable  = function(id) {
         		var new_order = Order(++order_number, 2, 1);
         		orders.push(new_order);
         	}
+
+        	setCounter();
+        	setNavigation();
+
         	setTimeout(function(){
 				$('#cart').removeClass('cart-bounce');
+				$('#cart').removeClass('bounce-4');
+				$('.counter').removeClass('cart-bounce');
+				$('.counter').removeClass('bounce-4');
 			}, 1000);
 
            console.log(orders)
@@ -132,6 +211,8 @@ $('document').ready(function(){
 	setDroppable(cart);
 
 	focus();
+	setCounter();
+    setNavigation();
 	
 //   window.onscroll = function() {
 //       var currentScrollPos = window.pageYOffset;
@@ -145,4 +226,12 @@ $('document').ready(function(){
 //
 //        prevScrollpos = currentScrollPos;
 //    }
+
+showTitle(1000);
+
+$(window).mousemove(function(e){
+    triggerTitle(e);
+    triggerFooter(e);
+});
+
 });
