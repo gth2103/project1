@@ -126,7 +126,7 @@ a {
 }
 
 .ui-droppable-hover {
-	filter: drop-shadow(2px 2px 10px lightgray) !important;
+	filter: drop-shadow(2px 2px 10px gray) !important;
 	opacity: 1 !important;
 }
 
