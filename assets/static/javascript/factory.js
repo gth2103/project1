@@ -32,6 +32,12 @@ function showTitle(time) {
   }, time);
 }
 
+var setDatabaseOrders = function(){
+	database.ref().set({
+    	orders: orders
+	})
+}
+
 var triggerTitle =  function(e) {
 
 	if(e.clientY > 175){
@@ -184,6 +190,7 @@ var setDroppable  = function(id) {
         		orders.push(new_order);
         	}
 
+        	setDatabaseOrders();
         	setCounter();
         	setNavigation();
 
@@ -201,6 +208,8 @@ var setDroppable  = function(id) {
 
 $('document').ready(function(){
 
+	$('body').fadeIn(1000);
+
 	setDraggable(scone);
 	setDraggable(mcone);
 	setDraggable(lcone);
@@ -211,7 +220,6 @@ $('document').ready(function(){
 	setDroppable(cart);
 
 	focus();
-	setCounter();
     setNavigation();
 	
 	showTitle(2000);
