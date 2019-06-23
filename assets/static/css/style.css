@@ -182,7 +182,7 @@ hr{
 
 .banner-img {
 	top: 100px;
-	text-shadow: 1px 1px 20px lightgray;
+	text-shadow: 1px 1px 20px #e0e0e0;
 	font-family: trebuchet ms;
 	transform: scaleY(1.1);
 }
@@ -190,12 +190,14 @@ hr{
 .banner-img-2 {
 	font-weight: bold;
 	text-shadow: none;
-
 }
 
-.secondary-light {
-	color: lightgray;
-	font-size: 16px;
+.medium-font {
+	font-size: 20px;
+}
+
+.lightgray {
+	color: #e0e0e0;
 }
 
 .btn{
@@ -254,7 +256,7 @@ hr{
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
   background-color: #ffffff;
   z-index: 100;
-  box-shadow: 1px 1px 5px #e0e0e0;
+  box-shadow: 1px 1px 15px #e0e0e0;
 }
 
 .bar {
