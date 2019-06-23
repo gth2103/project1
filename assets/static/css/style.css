@@ -252,9 +252,13 @@ hr{
   top: 0px; /* Stay on top */
   left: 0px;
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
-  /*text-shadow: 1px 1px 20px lightgray;*/
   background-color: #ffffff;
   z-index: 100;
+  box-shadow: 1px 1px 5px #e0e0e0;
+}
+
+.bar {
+	  box-shadow: 0px 0px 5px #e0e0e0;
 }
 
 .inactive-title {
