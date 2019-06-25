@@ -239,43 +239,43 @@ var setDroppableFlavor  = function(id) {
         	var id = $(ui.draggable).attr('id');
 
         	if(id === 'yellow'){
-        		var div = '<div class="rounded-circle border yellow flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-left">banana split<span class="float-right remove">&times;</span></label><br>'
+        		var div = '<div class="rounded-circle border rounded yellow flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-center">banana split<span class="float-right remove">&times;</span></label><br>'
 
         		$(this).parent().prepend(div);
 
         	}
         	else if(id === 'pink'){
-        		var div = '<div class="rounded-circle border pink flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-left">strawberry cheescake<span class="float-right remove">&times;</span></label><br>'
+        		var div = '<div class="rounded-circle border rounded pink flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-center">strawberry cheescake<span class="float-right remove">&times;</span></label><br>'
 
         		$(this).parent().prepend(div);
 
         	}
         	else if(id === 'blue'){
-        		var div = '<div class="rounded-circle border blue flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-left">lavender blueberry pie<span class="float-right remove">&times;</span></label><br>'
+        		var div = '<div class="rounded-circle border rounded blue flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-center">lavender blueberry pie<span class="float-right remove">&times;</span></label><br>'
 
         		$(this).parent().prepend(div);
 
         	}
         	else if(id === 'green'){
-        		var div = '<div class="rounded-circle border green flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-left">matcha green tea<span class="float-right remove">&times;</span></label><br>'
+        		var div = '<div class="rounded-circle border rounded green flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-center">matcha green tea<span class="float-right remove">&times;</span></label><br>'
 
         		$(this).parent().prepend(div);
 
         	}
         	else if(id === 'orange'){
-        		var div = '<div class="rounded-circle border orange flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-left">peaches \'n cream<span class="float-right remove">&times;</span></label><br>'
+        		var div = '<div class="rounded-circle border rounded orange flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-center">peaches \'n cream<span class="float-right remove">&times;</span></label><br>'
 
         		$(this).parent().prepend(div);
 
         	}
         	else if(id === 'brown'){
-        		var div = '<div class="rounded-circle border brown flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-left">mocha almond fudge<span class="float-right remove">&times;</span></label><br>'
+        		var div = '<div class="rounded-circle border rounded brown flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-center">mocha almond fudge<span class="float-right remove">&times;</span></label><br>'
 
         		$(this).parent().prepend(div);
 
         	}
         	else if(id === 'vanilla'){
-        		var div = '<div class="rounded-circle border vanilla flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-left">vanilla bean<span class="float-right remove">&times;</span></label><br>'
+        		var div = '<div class="rounded-circle border rounded vanilla flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-center">vanilla bean<span class="float-right remove">&times;</span></label><br>'
 
         		$(this).parent().prepend(div);
 
@@ -293,9 +293,19 @@ var setDroppableFlavor  = function(id) {
 
 var rotateImages   = function(){
 
-	var index = prev = 4;
+	var indexFirst = Math.floor(Math.random() * 14 + 1);
+
+	$('#img-home').css('background-image', 'url("./assets/static/images/ic'  + indexFirst + '.jpg")');
+
+	setTimeout(function(){
+			$('#img-home').addClass('img-home-animation-stop')
+		}, 5000);
+
+	prev = indexFirst;
 
 	setInterval(function(){
+
+		var index = Math.floor(Math.random() * 14 + 1);
 
 		while(prev == index) {
 			index = Math.floor(Math.random() * 14 + 1);
@@ -306,9 +316,11 @@ var rotateImages   = function(){
 		$('#img-home').css('background-image', 'url("./assets/static/images/ic'  + index + '.jpg")');
 
 		$('#img-home').addClass('img-home-animation');
+		$('#img-home').removeClass('img-home-animation-stop')
 
 		setTimeout(function(){
-			$('#img-home').removeClass('img-home-animation')
+			$('#img-home').removeClass('img-home-animation');
+			$('#img-home').addClass('img-home-animation-stop')
 		}, 5000);
 			
 	}, 20000);
@@ -321,6 +333,12 @@ var removeFlavor = function(){
 		$(this).parent().prev().remove();
 		$(this).parent().next().remove();
 		$(this).parent().remove();
+	}).on('mouseenter', function(){
+		$(this).parent().css('transition', 'background-color 0.5s ease-in-out');
+		$(this).parent().css('background-color', 'rgba(244, 246, 250, 0.2)');
+
+	}).on('mouseleave', function(){
+		$(this).parent().css('background-color', '');
 	});
 }
 

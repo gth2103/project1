@@ -39,7 +39,7 @@ hr{
 
 #img-home {
 	opacity: 1;
-	background-image: url("../images/ic4.jpg");
+	background-image: url("#");
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -48,7 +48,6 @@ hr{
 	color: white;
 	font-size: 32px;
 	transform: scaleY(0.9) translateY(-5%);
-
 }
 
 #selection{
@@ -159,6 +158,36 @@ hr{
     }
 }
 
+@keyframes fadeInHome {
+    0% {
+        opacity: 0;
+    }
+    7%{
+        opacity: 1;
+    }
+    15%{
+        opacity: 1;
+    }
+    100%{
+    	opacity: 1;
+    }
+}
+
+@keyframes fadeOutHome {
+    0% {
+        opacity: 1;
+    }
+    70%{
+    	opacity: 1;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+    	opacity: 0;
+    }
+}
+
 
 .small {
 	font-size: 13px;
@@ -174,7 +203,15 @@ hr{
   }
 
 .img-home-animation{
-    animation-name: fadeInOut;
+    animation-name: fadeInHome;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-fill-mode:forwards;
+}
+
+.img-home-animation-stop{
+    animation-name: fadeOutHome;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
     animation-duration: 20s;
