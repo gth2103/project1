@@ -1,7 +1,9 @@
 label {
 	color: #999999;
 	font-size: 11px;
-	width: 100px;
+	width: 102px;
+	border-radius: 20px;
+	transition: background-color 0.5s ease-in-out;
 }
 
 body {
@@ -110,10 +112,6 @@ hr{
 }
 
 .delete{
-	visibility: ;
-}
-
-.remove{
 	visibility: ;
 }
 
@@ -624,4 +622,8 @@ hr{
 .flavor:hover{
 	opacity: 1;
 	cursor: grab;
+}
+
+.remove:hover{
+	cursor: pointer;
 }
