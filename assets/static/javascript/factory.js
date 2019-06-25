@@ -281,6 +281,8 @@ var setDroppableFlavor  = function(id) {
 
         	}
 
+        	removeFlavor();
+
         	setDatabaseOrders();
 
            console.log(orders)
@@ -291,25 +293,35 @@ var setDroppableFlavor  = function(id) {
 
 var rotateImages   = function(){
 
+	var index = prev = 4;
+
 	setInterval(function(){
 
-			$('#img-home').css('background-image', 'url("./assets/static/images/ic'  + Math.floor(Math.random() * 15 + 1) + '.jpg")');
+		while(prev == index) {
+			index = Math.floor(Math.random() * 14 + 1);
+		}
 
-			$('#img-home').addClass('img-home-animation');
+		prev = index;
 
-			setTimeout(function(){
-				$('#img-home').removeClass('img-home-animation')
-			}, 5000);
+		$('#img-home').css('background-image', 'url("./assets/static/images/ic'  + index + '.jpg")');
+
+		$('#img-home').addClass('img-home-animation');
+
+		setTimeout(function(){
+			$('#img-home').removeClass('img-home-animation')
+		}, 5000);
 			
 	}, 20000);
 }
 
 var removeFlavor = function(){
 
-	$('.remove').on('click',  function(){
+	$('.remove').on('click', function(){
 
+		$(this).parent().prev().remove();
+		$(this).parent().next().remove();
 		$(this).parent().remove();
-	})
+	});
 }
 
 $('document').ready(function(){
@@ -333,7 +345,7 @@ $('document').ready(function(){
 	setDraggable(scone);
 
 	setDroppableFlavor(scone)
-	
+
 	removeFlavor()
 
 	setDroppable(cart)
