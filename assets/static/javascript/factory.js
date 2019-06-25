@@ -239,43 +239,43 @@ var setDroppableFlavor  = function(id) {
         	var id = $(ui.draggable).attr('id');
 
         	if(id === 'yellow'){
-        		var div = '<div class="rounded-circle border rounded yellow flavor-selected d-inline-block"></div><label class="align-text-top text-left pl-3 pr-2"><span class="float-right remove">&times;</span>banana split</label><br>'
+        		var div = '<div class="rounded-circle border rounded yellow flavor-selected d-inline-block"></div><label class="align-text-top text-left ml-1 pl-2 pr-2"><span class="float-right remove">&times;</span>banana split</label><br>'
 
         		$(this).parent().prepend(div);
 
         	}
         	else if(id === 'pink'){
-        		var div = '<div class="rounded-circle border rounded pink flavor-selected d-inline-block"></div><label class="align-text-top text-left pl-3 pr-2"><span class="float-right remove">&times;</span>strawberry cheescake</label><br>'
+        		var div = '<div class="rounded-circle border rounded pink flavor-selected d-inline-block"></div><label class="align-text-top text-left ml-1 pl-2 pr-2"><span class="float-right remove">&times;</span>strawberry cheescake</label><br>'
 
         		$(this).parent().prepend(div);
 
         	}
         	else if(id === 'blue'){
-        		var div = '<div class="rounded-circle border rounded blue flavor-selected d-inline-block"></div><label class="align-text-top text-left pl-3 pr-2"><span class="float-right remove">&times;</span>lavender blueberry pie</label><br>'
+        		var div = '<div class="rounded-circle border rounded blue flavor-selected d-inline-block"></div><label class="align-text-top text-left ml-1 pl-2 pr-2"><span class="float-right remove">&times;</span>lavender blueberry pie</label><br>'
 
         		$(this).parent().prepend(div);
 
         	}
         	else if(id === 'green'){
-        		var div = '<div class="rounded-circle border rounded green flavor-selected d-inline-block"></div> <label class="align-text-top text-left pl-3 pr-2"><span class="float-right remove">&times;</span>matcha green tea</label><br>'
+        		var div = '<div class="rounded-circle border rounded green flavor-selected d-inline-block"></div> <label class="align-text-top text-left ml-1 pl-2 pr-2"><span class="float-right remove">&times;</span>matcha green tea</label><br>'
 
         		$(this).parent().prepend(div);
 
         	}
         	else if(id === 'orange'){
-        		var div = '<div class="rounded-circle border rounded orange flavor-selected d-inline-block"></div><label class="align-text-top text-left pl-3 pr-2"><span class="float-right remove">&times;</span>peaches \'n cream</label><br>'
+        		var div = '<div class="rounded-circle border rounded orange flavor-selected d-inline-block"></div><label class="align-text-top text-left ml-1 pl-2 pr-2"><span class="float-right remove">&times;</span>peaches \'n cream</label><br>'
 
         		$(this).parent().prepend(div);
 
         	}
         	else if(id === 'brown'){
-        		var div = '<div class="rounded-circle border rounded brown flavor-selected d-inline-block"></div> <label class="align-text-top text-left pl-3 pr-2"><span class="float-right remove">&times;</span>mocha almond fudge</label><br>'
+        		var div = '<div class="rounded-circle border rounded brown flavor-selected d-inline-block"></div> <label class="align-text-top text-left ml-1 pl-2 pr-2"><span class="float-right remove">&times;</span>mocha almond fudge</label><br>'
 
         		$(this).parent().prepend(div);
 
         	}
         	else if(id === 'vanilla'){
-        		var div = '<div class="rounded-circle border rounded vanilla flavor-selected d-inline-block"></div> <label class="align-text-top text-left pl-3 pr-2"><span class="float-right remove">&times;</span>vanilla bean</label><br>'
+        		var div = '<div class="rounded-circle border rounded vanilla flavor-selected d-inline-block"></div> <label class="align-text-top text-left ml-1 pl-2 pr-2"><span class="float-right remove">&times;</span>vanilla bean</label><br>'
 
         		$(this).parent().prepend(div);
 
