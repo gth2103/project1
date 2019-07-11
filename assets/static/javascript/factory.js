@@ -22,7 +22,7 @@ var order_number = 0;
 
 var size;
 
-var items = [];
+var items = []; // local storage, maintian items in session before saving order to database / use to populate dashboard
 var item_number = 0;
 
 
@@ -365,6 +365,25 @@ var deleteItem = function() {
 	});
 }
 
+var addItem = function(){
+
+		$('.small-container').on('click', function(){
+
+			var item = '<div class="m-5 cone cone-1 text-center d-inline-block align-bottom"><span class="float-right delete">&times;</span><img draggable="false" id="small-cone" title="Small Cone" class="m-2 mt-3 draggable" src="./assets/static/images/icecream.png"><br><div class="rounded-circle d-inline-block"></div><label class="align-text-top bottom">1 scoop left</label></div>'
+
+			$('#selection').append(item)
+			deleteItem();
+
+			setDraggable(scone);
+
+			setDroppableFlavor(scone)
+
+			removeFlavor()
+
+			setDroppable(cart)
+		})
+}
+
 $('document').ready(function(){
 
 	var div = '<div class="rounded-circle border yellow flavor-selected mr-2 d-inline-block"></div> <label class="align-text-top text-left">banana split<span class="float-right remove">&times;</span></label><br>'
@@ -383,18 +402,10 @@ $('document').ready(function(){
 	setDraggable(brown);
 	setDraggable(vanilla);
 
-	setDraggable(scone);
-
-	setDroppableFlavor(scone)
-
-	removeFlavor()
-
-	setDroppable(cart)
-
 	focus();
     setNavigation();
 
-    deleteItem();
+    addItem();
 	
 	showTitle(2000);
 
