@@ -22,7 +22,9 @@ var order_number = 0;
 
 var size;
 
-var items = []; // local storage, maintian items in session before saving order to database / use to populate dashboard
+// TODO: local storage, maintian items in session before saving order to database / use to populate dashboard
+
+var items = [];
 var item_number = 0;
 
 
@@ -367,21 +369,26 @@ var deleteItem = function() {
 
 var addItem = function(){
 
-		$('.small-container').on('click', function(){
+	$('.small-container').on('click', function(){
 
-			var item = '<div class="m-5 cone cone-1 text-center d-inline-block align-bottom"><span class="float-right delete">&times;</span><img draggable="false" id="small-cone" title="Small Cone" class="m-2 mt-3 draggable" src="./assets/static/images/icecream.png"><br><div class="rounded-circle d-inline-block"></div><label class="align-text-top bottom">1 scoop left</label></div>'
+		var container = $('.form-check-input:checked').val();
 
-			$('#selection').append(item)
-			deleteItem();
+		var item = '<div class="m-5 ' + container + ' ' + container + '-1 text-center d-inline-block align-bottom"><span class="float-right delete">&times;</span><img draggable="false" id="small-' + container + '" title="Small Cone" class="m-2 mt-3 draggable" src="./assets/static/images/icecream.png"><br><div class="rounded-circle d-inline-block"></div><label class="align-text-top bottom">1 scoop left</label></div></div>'
 
-			setDraggable(scone);
+		$('#selection').append(item);
 
-			setDroppableFlavor(scone)
+		deleteItem();
 
-			removeFlavor()
+		setDraggable(scone);
 
-			setDroppable(cart)
-		})
+		setDroppableFlavor(scone)
+
+		removeFlavor()
+
+		setDroppable(cart)
+
+		// TODO: get container info cup vs cone + set container type when creating item 
+	});
 }
 
 $('document').ready(function(){
