@@ -373,7 +373,17 @@ var addItem = function(){
 
 		var container = $('.form-check-input:checked').val();
 
-		var item = '<div class="m-5 ' + container + ' ' + container + '-1 text-center d-inline-block align-bottom"><span class="float-right delete">&times;</span><img draggable="false" id="small-' + container + '" title="Small Cone" class="m-2 mt-3 draggable" src="./assets/static/images/icecream.png"><br><div class="rounded-circle d-inline-block"></div><label class="align-text-top bottom">1 scoop left</label></div></div>'
+		if(container === 'cup'){
+
+			var item = '<div class="m-5 ' + container + ' ' + container + '-1 text-center d-inline-block align-bottom"><span class="float-right delete">&times;</span><img draggable="false" id="small-' + container + '" title="Small Cup" class="m-2 mt-3 draggable" src="./assets/static/images/bowl-1.tiff"><br><div class="rounded-circle d-inline-block"></div><label class="align-text-top bottom">1 scoop left</label></div></div>'
+
+
+		}
+		else {
+
+			var item = '<div class="m-5 ' + container + ' ' + container + '-1 text-center d-inline-block align-bottom"><span class="float-right delete">&times;</span><img draggable="false" id="small-' + container + '" title="Small Cone" class="m-2 mt-3 draggable" src="./assets/static/images/icecream.png"><br><div class="rounded-circle d-inline-block"></div><label class="align-text-top bottom">1 scoop left</label></div></div>'
+		}
+
 
 		$('#selection').append(item);
 
@@ -383,12 +393,83 @@ var addItem = function(){
 
 		setDroppableFlavor(scone)
 
+		setDraggable(scup);
+
+		setDroppableFlavor(scup)
+
 		removeFlavor()
 
 		setDroppable(cart)
 
 		// TODO: get container info cup vs cone + set container type when creating item 
 	});
+
+	$('.medium-container').on('click', function(){
+
+			var container = $('.form-check-input:checked').val();
+
+			if(container === 'cup'){
+
+				var item = '<div class="m-5 ' + container + ' ' + container + '-2 text-center d-inline-block align-bottom"><span class="float-right delete">&times;</span><img draggable="false" id="medium-' + container + '" title="Medium Cup" class="m-2 mt-3 draggable" src="./assets/static/images/bowl-2.tiff"><br><div class="rounded-circle d-inline-block"></div><label class="align-text-top bottom">2 scoops left</label></div></div>'
+
+			}
+			else {
+
+				var item = '<div class="m-5 ' + container + ' ' + container + '-2 text-center d-inline-block align-bottom"><span class="float-right delete">&times;</span><img draggable="false" id="medium-' + container + '" title="Medium Cone" class="m-2 mt-3 draggable" src="./assets/static/images/icecream-cone-2.png"><br><div class="rounded-circle d-inline-block"></div><label class="align-text-top bottom">2 scoop left</label></div></div>'
+			}
+
+		$('#selection').append(item);
+
+		deleteItem();
+
+		setDraggable(mcone);
+
+		setDroppableFlavor(mcone)
+
+		setDraggable(mcup);
+
+		setDroppableFlavor(mcup)
+
+		removeFlavor()
+
+		setDroppable(cart)
+
+		// TODO: get container info cup vs cone + set container type when creating item 
+	});
+
+	$('.large-container').on('click', function(){
+
+			var container = $('.form-check-input:checked').val();
+
+			if(container === 'cup'){
+
+				var item = '<div class="m-5 ' + container + ' ' + container + '-3 text-center d-inline-block align-bottom"><span class="float-right delete">&times;</span><img draggable="false" id="large-' + container + '" title="Large Cup" class="m-2 mt-3 draggable" src="./assets/static/images/bowl-3.tiff"><br><div class="rounded-circle d-inline-block"></div><label class="align-text-top bottom">3 scoops left</label></div></div>'
+
+			}
+			else {
+
+				var item = '<div class="m-5 ' + container + ' ' + container + '-3 text-center d-inline-block align-bottom"><span class="float-right delete">&times;</span><img draggable="false" id="large-' + container + '" title="Large Cone" class="m-2 mt-3 draggable" src="./assets/static/images/icecream-cone-3.png"><br><div class="rounded-circle d-inline-block"></div><label class="align-text-top bottom">3 scoop left</label></div></div>'
+			}
+
+		$('#selection').append(item);
+
+		deleteItem();
+
+		setDraggable(lcone);
+
+		setDroppableFlavor(lcone)
+
+		setDraggable(lcup);
+
+		setDroppableFlavor(lcup)
+
+		removeFlavor()
+
+		setDroppable(cart)
+
+		// TODO: change draggable droppable (flavors drop) implementation from restrictive dependency on id. 
+	});			
+
 }
 
 $('document').ready(function(){
